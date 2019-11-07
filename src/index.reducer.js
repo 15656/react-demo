@@ -1,27 +1,17 @@
 const initialState = {
-    text:5
+    text:5000
 }
 
-// //这是reducer
-// const reducer = (state = tiger, action) => {
-//     switch (action.type) {
-//         case '涨工资':
-//             return state += 100;
-//         case '扣工资':
-//             return state -= 100;
-//         default:
-//             return state;
-//     }
-// }
 
 
-const reducer = function(state,action){
+
+const reducer = function(state = initialState ,action){
     console.log(state)
     switch(action.type){
         case '涨工资':
-            return {text:action.text+10000}
+            return {text:action.text+100}
         case '扣工资':
-            return {text:action.text-1}
+            return {text:action.text-100}
         default:
             return initialState;
     }

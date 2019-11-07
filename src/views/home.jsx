@@ -20,17 +20,17 @@ const div = {
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      name: "菜鸟教程",
-      site: "https://www.runoob.com"
-    }
+    // this.handleClick = this.handleClick.bind(this);
+    // this.state = {
+    //   name: "菜鸟教程",
+    //   site: "https://www.runoob.com"
+    // }
   }
-  handleClick(){
-   this.setState({
-    name:this.state.name + '9999'
-   })
-  }
+  // handleClick(){
+  //  this.setState({
+  //   name:this.state.name + '9999'
+  //  })
+  // }
   render() {
     return (
       <div style={div}>

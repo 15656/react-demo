@@ -13,7 +13,7 @@ class Reduxstore extends Component {
         return (
             <div className="App">
                 <div className="App">
-                    <h2>当月工资为{this.props.tiger}</h2>
+                    <h2>当月工资为{this.props.tiger.text}</h2>
                     <button onClick={PayIncrease}>升职加薪</button>
                     <button onClick={PayDecrease}>迟到罚款</button>
                 </div>

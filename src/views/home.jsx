@@ -38,7 +38,7 @@ class Home extends Component {
            <Nav />
         </div>
         <div className="contant">
-          <Route path='/info' exact component={Info}/>
+          <Route path='/info' component={Info}/>
           <Route path='/about'  component={About}/>
           <Route path='/redux'  component={Reduxstore}/>
         </div>

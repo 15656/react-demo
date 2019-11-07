@@ -1,5 +1,3 @@
-const tiger = 10000
-
 const initialState = {
     text:5
 }

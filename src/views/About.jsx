@@ -10,7 +10,7 @@ let query = {
 class About extends Component {
   render() {
     HttpGet('member/back/city/list/1',{}).then(res =>{
-      if(res.code == 0){
+      if(res.code === 0){
         //js跳转
         setTimeout(() =>{
           this.props.history.push({ pathname : '/redux' ,query : res.data })

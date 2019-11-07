@@ -36,7 +36,7 @@ export function HttpPost(url, data = {}) {
   return new Promise((resolve, reject) => {
     ajx.post(url, data)
       .then((response) => {
-        if (url == 'user/signin') {
+        if (url === 'user/signin') {
           // /登录,把请求头返回
           resolve(response)
         } else {

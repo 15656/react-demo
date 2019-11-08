@@ -7,7 +7,7 @@ export   function mapStateToProps(state) {
 //需要触发什么行为
 export   function mapDispatchToProps(dispatch) {
     return {
-      PayIncrease: () => dispatch({ type: '涨工资' }),
-      PayDecrease: () => dispatch({ type: '扣工资'}),
+      PayIncrease: (str) => dispatch(str),
+      PayDecrease: (str) => dispatch(str),
     }
   }

@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 import { connect } from 'react-redux'
 import {mapStateToProps,mapDispatchToProps} from '../function.reducer'
 import store from "../index.reducer"
-
+// import { Button } from 'element-react';
 
 
 const div = {
@@ -49,4 +49,4 @@ class Home extends Component {
 }
 
 
-export default Home = connect(mapStateToProps, mapDispatchToProps)(Home) ;
+export default Home = connect(mapStateToProps, mapDispatchToProps)(Home);

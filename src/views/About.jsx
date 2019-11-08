@@ -1,6 +1,4 @@
 import React,{Component} from 'react';
-import {mapStateToProps,mapDispatchToProps} from '../function.reducer'
-import { connect } from 'react-redux'
 import {HttpGet} from '../api/index'
 
 class About extends Component {
@@ -22,4 +20,4 @@ class About extends Component {
   }
 }
 
-export default  About = connect(mapStateToProps, mapDispatchToProps)(About) ;
+export default  About;

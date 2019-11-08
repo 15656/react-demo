@@ -1,48 +1,51 @@
 import React, { Component } from 'react';
-// import {mapStateToProps,mapDispatchToProps} from '../function.reducer'
+import { mapStateToProps, mapDispatchToProps } from '../function.reducer'
 import { connect } from 'react-redux'
 
 
-//需要渲染什么数据
-export   function mapStateToProps(state) {
-    return {
-      tiger: state
-    }
-  }
-  let str = null;
-//   const add = () => str;
+// import { Button } from 'element-react';
 
-//需要触发什么行为
-export   function mapDispatchToProps(dispatch) {
-    return {
-      PayIncrease: () => dispatch(str),
-      PayDecrease: () => dispatch({ type: '扣工资',text:555}),
-    }
-  }
+
 
 
 
 class Reduxstore extends Component {
-    componentDidMount() {
-        console.log(this.props)
-    }
-    addnumber(){
-        str =  {type: "涨工资" ,text:999999999999};
-        this.props.PayIncrease();
-    }
-    render() {
-        const { PayDecrease } = this.props;
-        return (
-            <div className="App">
-                <div className="App">
-                    <h2>当月工资为{this.props.tiger.text}</h2>
-                    <button onClick={() => this.addnumber()}>升职加薪</button>
-                    <button onClick={PayDecrease}>迟到罚款</button>
-                </div>
-            </div>
-        );
-    }
-}  
+  componentDidMount() {
+    console.log(this.props)
+  }
+  addnumber() {
+    let str = {
+      type: "涨工资", obj: {
+        name: "33333333",
+        age: 222,
+        num: 1223242342
+      }
+    };
+    this.props.PayIncrease(str);
+  }
+  removenumber() {
+    let str = {
+      type: "扣工资", obj: {
+        name: "555555",
+        age: 33333,
+        num: 3333
+      }
+    };
+    this.props.PayDecrease(str);
+  }
+  render() {
+    return (
+      <div className="App">
+        <div className="App">
+        {/* <Button type="primary">Hello</Button> */}
+          <h2>当月工资为{this.props.tiger.name}={this.props.tiger.age}={this.props.tiger.num}</h2>
+          <button onClick={() => this.addnumber()}>升职加薪</button>
+          <button onClick={() => this.removenumber()}>迟到罚款</button>
+        </div>
+      </div>
+    );
+  }
+}
 
 export default Reduxstore = connect(mapStateToProps, mapDispatchToProps)(Reduxstore) ;
-  
+

@@ -1,22 +1,15 @@
 import { createStore } from 'redux'
-
-
 const initialState = {
-    text:5000
+   name:"张山"
 }
-
-
-
-
 const reducer = function(state = initialState ,action){
-    console.log(state)
     switch(action.type){
         case '涨工资':
-            return {text:action.text+100}
+            return Object.assign({},action.obj)
         case '扣工资':
-            return {text:action.text-100}
+            return Object.assign({},action.obj)
         default:
-            return initialState;
+            return state;
     }
 }
 

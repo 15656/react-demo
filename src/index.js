@@ -1,20 +1,56 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import reducer from './index.reducer'
+import store from './index.reducer'
+import { BrowserRouter as Router, Route, Switch, } from "react-router-dom";
+import routeConfig from './router'
+import Errorpage from './views/error'
 
 
-//创建store
-const store = createStore(reducer);
+
+
+
 
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+
+        <Router>
+            <Switch>
+                {
+                    routeConfig.map((router, index) => {
+                        if (router.exact) {
+
+                            return <Route exact key={index} path={router.path}
+                                render={
+                                    props => (
+                                        <router.component {...props} routes={router.routes} />
+                                    )
+                                }
+                            />
+
+                        } else {
+
+                            return <Route key={index} path={router.path}
+                                render={
+                                    props => (
+                                        <router.component {...props} routes={router.routes} />
+                                    )
+                                }
+                            />
+
+                        }
+
+                    })
+                }
+                {/* // 所有错误路由跳转页面 */}
+                <Route component={Errorpage} />
+            </Switch>
+        </Router>
+
+
     </Provider>,
     document.getElementById('root'));
 

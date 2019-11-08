@@ -15,15 +15,15 @@ class Nav extends Component {
       navList:[
         {
         name:'info',
-        part:'/info'
+        part:'/home/info'
       },
      {
         name:'about',
-        part:'/about'
+        part:'/home/about'
       },
       {
         name:'redux',
-        part:'/redux'
+        part:'/home/redux'
       }
     ]
     }

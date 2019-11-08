@@ -1,3 +1,6 @@
+import { createStore } from 'redux'
+
+
 const initialState = {
     text:5000
 }
@@ -17,4 +20,7 @@ const reducer = function(state = initialState ,action){
     }
 }
 
-export default reducer
+//创建store
+const store = createStore(reducer);
+
+export default store

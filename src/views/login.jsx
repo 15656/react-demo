@@ -1,13 +1,13 @@
 import React,{Component} from 'react';
 
-class Errorpage extends Component {
+class Login extends Component {
   render() {
     return (
       <div>
-       <p>404404404404404</p>
+       <p>LoginLoginLoginLoginLogin</p>
       </div>
     )
   }
 }
 
-export default Errorpage;
+export default Login;

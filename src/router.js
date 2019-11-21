@@ -3,6 +3,7 @@ import About from './views/About'
 import Info from './views/Info'
 import Reduxstore from './views/Reduxstore'
 import Errorpage from './views/error'
+import Login from './views/login'
 
 // const routeConfig = [
 //     {
@@ -26,8 +27,8 @@ const routeConfig = {
 
 }
 routeConfig.other = [{
-    path: '/404',
-    component: Errorpage,
+    path: '/login',
+    component: Login,
     name: '第一个路由',
 }]
 
@@ -55,6 +56,11 @@ routeConfig.manin = [{
     {
         path: '/redux',
         component: Reduxstore,
+        name: '第一个路由',
+    },
+    {
+        path: '/404',
+        component: Errorpage,
         name: '第一个路由',
     }
 

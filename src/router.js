@@ -1,9 +1,9 @@
-import Home from './views/home'
-import About from './views/About'
-import Info from './views/Info'
-import Reduxstore from './views/Reduxstore'
-import Errorpage from './views/error'
-import Login from './views/login'
+import Home from '@/views/home'
+import About from '@/views/About'
+import Info from '@/views/Info'
+import Reduxstore from '@/views/Reduxstore'
+import Errorpage from '@/views/error'
+import Login from '@/views/login'
 
 // const routeConfig = [
 //     {

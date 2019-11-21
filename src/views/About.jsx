@@ -7,7 +7,7 @@ class About extends Component {
       if(res.code === 0){
         //js跳转
         setTimeout(() =>{
-          this.props.history.push({ pathname : '/home/redux' ,query : res.data })
+          this.props.history.push({ pathname : '/redux' ,query : res.data })
         },5000)
       }
     })

@@ -1,44 +1,40 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, } from "react-router-dom";
 import routeConfig from '../router'
-import Errorpage from './error'
 import 'element-theme-default';
+import Home from './home'
+// import RouterMap from './routerMap'
 
 
 class App extends Component {
   render() {
+    const MainRouter = (
+      <Home router={routeConfig.manin}></Home>
+    );
+
     return (
       <div >
         <Router>
           <Switch>
             {
-              routeConfig.map((router, index) => {
-                if (router.exact) {
+              routeConfig.other.map((router, index) => {
+                  return <Route exact key={index} path={router.path} render={() => router.component} />
+                // else {
 
-                  return <Route exact key={index} path={router.path}
-                    render={
-                      props => (
-                        <router.component {...props} routes={router.routes} />
-                      )
-                    }
-                  />
+                //   return <Route key={index} path={router.path}
+                //     render={
+                //       props => (
+                //         <router.component {...props} routes={router.routes} />
+                //       )
+                //     }
+                //   />
 
-                } else {
-
-                  return <Route key={index} path={router.path}
-                    render={
-                      props => (
-                        <router.component {...props} routes={router.routes} />
-                      )
-                    }
-                  />
-
-                }
+                // }
 
               })
             }
-            {/* // 所有错误路由跳转页面 */}
-            <Route component={Errorpage} />
+           {/* 主要页面 */}
+						<Route path="/" render={() => MainRouter} />
           </Switch>
         </Router>
       </div>

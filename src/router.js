@@ -5,27 +5,9 @@ import Reduxstore from './views/Reduxstore'
 import Errorpage from './views/error'
 import Login from './views/login'
 
-// const routeConfig = [
-//     {
-//         path: '/',
-//         component: Info,
-//         name: '第一个路由',
-//         exact: true
-//     },
-//     {
-//         path: '/home',
-//         component: Home,
-//         name: '第一个路由',
-//         routes: [
-//             { path: '/home/info', component: Info},
-//             { path: '/home/about', component: About },
-//             { path: '/home/redux', component: Reduxstore },
-//         ]
-//     }
-// ]
-const routeConfig = {
 
-}
+const routeConfig = {}
+
 routeConfig.other = [{
     path: '/login',
     component: Login,

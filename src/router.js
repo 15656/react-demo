@@ -4,6 +4,7 @@ import Info from '@/views/Info'
 import Reduxstore from '@/views/Reduxstore'
 import Errorpage from '@/views/error'
 import Login from '@/views/login'
+import TinymceComponent from '@/views/component/Tinymce'
 
 
 const routeConfig = {}
@@ -38,6 +39,11 @@ routeConfig.manin = [{
     {
         path: '/redux',
         component: Reduxstore,
+        name: '第一个路由',
+    },
+    {
+        path: '/tinymce',
+        component: TinymceComponent,
         name: '第一个路由',
     },
     {

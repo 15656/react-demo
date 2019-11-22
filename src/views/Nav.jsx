@@ -24,6 +24,10 @@ class Nav extends Component {
       {
         name:'redux',
         part:'/redux'
+      },
+      {
+        name:'tinymce',
+        part:'/tinymce'
       }
     ]
     }

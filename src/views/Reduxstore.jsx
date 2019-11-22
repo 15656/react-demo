@@ -8,7 +8,6 @@ import { connect } from 'react-redux'
 
 
 
-
 class Reduxstore extends Component {
   componentDidMount() {
     console.log(this.props)
@@ -37,7 +36,7 @@ class Reduxstore extends Component {
     return (
       <div className="App">
         <div className="App">
-        {/* <Button type="primary">Hello</Button> */}
+          {/* <Button type="primary">Hello</Button> */}
           <h2>当月工资为{this.props.tiger.name}={this.props.tiger.age}={this.props.tiger.num}</h2>
           <button onClick={() => this.addnumber()}>升职加薪</button>
           <button onClick={() => this.removenumber()}>迟到罚款</button>
@@ -47,5 +46,5 @@ class Reduxstore extends Component {
   }
 }
 
-export default Reduxstore = connect(mapStateToProps, mapDispatchToProps)(Reduxstore) ;
+export default Reduxstore = connect(mapStateToProps, mapDispatchToProps)(Reduxstore);
 
